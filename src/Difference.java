@@ -1,5 +1,20 @@
 import java.util.Scanner;
+import static java.util.Arrays.sort;
 public class Difference {
+    public static int[] PairSort(){
+        int []minPair = new int[2];
+        int[]arr = Array();
+            sort(arr);
+        int minDiff=Integer.MAX_VALUE;
+        for(int i =0;i<arr.length-2;i++){
+            if (minDiff>Math.abs(arr[i]-arr[i+1])){
+                minDiff = Math.abs(arr[i] - arr[i+1]);
+                minPair[0] = arr[i];
+                minPair[1] = arr[i+1];
+            }
+        }
+        return minPair;
+    }
     public static int[] Pair(){
         int []arr=Array();
         int []minPair = new int[2];

@@ -1,12 +1,11 @@
 import java.util.Scanner;
 import static java.util.Arrays.sort;
 public class Difference {
-    public static int[] PairSort(){
+    public static int[] PairSort(int[]arr){
         int []minPair = new int[2];
-        int[]arr = Array();
             sort(arr);
         int minDiff=Integer.MAX_VALUE;
-        for(int i =0;i<arr.length-2;i++){
+        for(int i =0;i<arr.length-1;i++){
             if (minDiff>Math.abs(arr[i]-arr[i+1])){
                 minDiff = Math.abs(arr[i] - arr[i+1]);
                 minPair[0] = arr[i];
@@ -15,8 +14,7 @@ public class Difference {
         }
         return minPair;
     }
-    public static int[] Pair(){
-        int []arr=Array();
+    public static int[] Pair(int []arr){
         int []minPair = new int[2];
         int minDiff=Integer.MAX_VALUE;
         for (int i =0;i< arr.length;i++){
@@ -30,7 +28,7 @@ public class Difference {
         }
         return minPair;
     }
-    private static int[] Array(){
+    public static int[] Array_lol(){
         Scanner scan = new Scanner(System.in);
         System.out.println("введите размер массива");
         int size = scan.nextInt();

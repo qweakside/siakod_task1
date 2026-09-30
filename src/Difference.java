@@ -3,7 +3,7 @@ import static java.util.Arrays.sort;
 public class Difference {
     public static int[] PairSort(int[]arr){
         int []minPair = new int[2];
-            sort(arr);
+        sort(arr);
         int minDiff=Integer.MAX_VALUE;
         for(int i =0;i<arr.length-1;i++){
             if (minDiff>Math.abs(arr[i]-arr[i+1])){
